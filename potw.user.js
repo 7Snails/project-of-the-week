@@ -10,6 +10,5 @@
 // @grant        none
 // ==/UserScript==
 
-/* https://scratch.mit.edu/studios/4169223/ */ 
-
+console.log("testing 1")
 console.log(document.getElementsByTagName("h4")[1].innerHTML);
