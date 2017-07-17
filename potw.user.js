@@ -8,9 +8,8 @@
 // @match        https://scratch.mit.edu/
 // @icon         http://tampermonkey.net/favicon.ico
 // @grant        none
-// @run-at       document-end
 // ==/UserScript==
 
 /* https://scratch.mit.edu/studios/4169223/ */ 
 
-console.log(document.getElementsByTagName("h4")[1].innerHTML;);
+console.log(document.getElementsByTagName("h4")[1].innerHTML);
