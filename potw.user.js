@@ -13,4 +13,4 @@
 
 /* https://scratch.mit.edu/studios/4169223/ */ 
 
-document.getElementsByTagName("h4")[0].innerHTML = "Project of the Week";
+document.getElementsByTagName("h4")[1].innerHTML = "Project of the Week";
