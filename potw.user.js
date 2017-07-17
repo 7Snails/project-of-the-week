@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         The Daily Pick
+// @name         Project of the Week
 // @namespace    http://scratch.mit.edu/users/7Snails/
 // @version      0.0.1
 // @description  Adds a new "featured" section to the home page
@@ -10,3 +10,7 @@
 // @grant        none
 // @run-at       document-end
 // ==/UserScript==
+
+/* https://scratch.mit.edu/studios/4169223/ */ 
+
+document.getElementsByTagName("h4")[0].innerHTML = "Project of the Week";
