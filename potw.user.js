@@ -38,3 +38,4 @@ document.write(description);
 document.write("<br>");
 document.write("By " + creator);
 document.write("<img src='" + userImage + "'>");
+document.getElementsByClassName("news").innerHTML = "";
