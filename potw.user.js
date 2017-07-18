@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Site - Script
 // @description    ES6 script
-// @author         Collin Barrett <collinb1129@gmail.com> (http://github.com/7snails)
+// @author         7Snails
 // @namespace      http://spiralx.org/
 // @version        0.0.1
 // @icon           http://tampermonkey.net/favicon.ico
@@ -9,5 +9,9 @@
 // @grant          none
 // @run-at         document-end
 // ==/UserScript==
-
-console.log("testing")
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open("GET", "https://raw.githubusercontent.com/7Snails/project-of-the-week/master/data.json", false);
+xmlHttp.send(null);
+var data = xmlHttp.responseText;
+var test = data.test;
+window.alert(test);
