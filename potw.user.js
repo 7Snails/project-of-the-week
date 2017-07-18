@@ -30,7 +30,7 @@ xmlHttp.open("GET", "https://api.scratch.mit.edu/users/" + creator, false);
 xmlHttp.send(null);
 var userData = JSON.parse(xmlHttp.responseText);
 
-var userImage = userData.profile.images.90x90;
+var userImage = userData.profile.images["90x90"]
 window.alert(userImage);
 
 document.write("<img src='" + thumbnail + "'>");
