@@ -13,4 +13,10 @@ var xmlHttp = new XMLHttpRequest();
 xmlHttp.open("GET", "https://raw.githubusercontent.com/7Snails/project-of-the-week/master/data.json", false);
 xmlHttp.send(null);
 var data = JSON.parse(xmlHttp.responseText);
-window.alert(data.description);
+
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open("GET", "https://scratch.mit.edu/api/v1/project/" + data.id, false);
+xmlHttp.send(null);
+var projectData = JSON.parse(xmlHttp.responseText);
+
+window.alert(projectData.creator);
