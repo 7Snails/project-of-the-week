@@ -19,4 +19,9 @@ xmlHttp.open("GET", "https://scratch.mit.edu/api/v1/project/" + data.id, false);
 xmlHttp.send(null);
 var projectData = JSON.parse(xmlHttp.responseText);
 
-window.alert(projectData.creator);
+var creator = projectData.creator.username;
+var thumbnail = "https://" + projectData.thumbnail.substring(2, projectData.thumbnail.length);
+
+
+document.write("<img src='" + thumbnail + "'>");
+document.write("By " + creator);
