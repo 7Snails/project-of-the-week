@@ -9,10 +9,13 @@
 // @grant          none
 // @run-at         document-end
 // ==/UserScript==
+
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open("GET", "https://raw.githubusercontent.com/7Snails/project-of-the-week/master/data.json", false);
 xmlHttp.send(null);
 var data = JSON.parse(xmlHttp.responseText);
+
+var description = data.description;
 
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open("GET", "https://scratch.mit.edu/api/v1/project/" + data.id, false);
@@ -22,6 +25,14 @@ var projectData = JSON.parse(xmlHttp.responseText);
 var creator = projectData.creator.username;
 var thumbnail = "https://" + projectData.thumbnail.substring(2, projectData.thumbnail.length);
 
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open("GET", "https://api.scratch.mit.edu/users/" + creator, false);
+xmlHttp.send(null);
+var userData = JSON.parse(xmlHttp.responseText);
+
+var userImage = userData.profile.images.90x90;
+window.alert(userImage);
 
 document.write("<img src='" + thumbnail + "'>");
 document.write("By " + creator);
+document.write(description);
