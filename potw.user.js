@@ -33,6 +33,8 @@ var userData = JSON.parse(xmlHttp.responseText);
 var userImage = userData.profile.images["90x90"]
 
 document.write("<img src='" + thumbnail + "'>");
+document.write("<br>");
 document.write(description);
+document.write("<br>");
 document.write("By " + creator);
 document.write("<img src='" + userImage + "'>");
