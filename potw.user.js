@@ -12,6 +12,5 @@
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open("GET", "https://raw.githubusercontent.com/7Snails/project-of-the-week/master/data.json", false);
 xmlHttp.send(null);
-var data = xmlHttp.responseText;
-var test = data.test;
-window.alert(test);
+var data = JSON.parse(xmlHttp.responseText);
+window.alert(data.description);
