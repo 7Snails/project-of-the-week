@@ -33,5 +33,5 @@ var userData = JSON.parse(xmlHttp.responseText);
 var userImage = userData.profile.images["90x90"]
 
 
-
-document.getElementsByTagName("div")[15].innerHTML = "<center><img src='" + thumbnail + "' width='300px'><br>By " + creator + "<img src='" + userImage + "' width='20px'></center>";
+document.getElementsByTagName("div")[14].innerHTML = "<h4>Project of the Week</h4>";
+document.getElementsByTagName("div")[15].innerHTML = "<center><img src='" + thumbnail + "' width='300px'><br>By " + creator + "<img src='" + userImage + "' width='20px'><br>" + description + "</center>";
