@@ -4,7 +4,6 @@
 // @author         7Snails, TastyLittleMuffin
 // @version        1.0
 // @match          *://scratch.mit.edu
-// @run-at         document-end
 // ==/UserScript==
 
 window.onload = function() {
