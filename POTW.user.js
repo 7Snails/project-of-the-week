@@ -2,8 +2,9 @@
 // @name           Project of the Week
 // @description    Each week, a quality project is hand-selected. With this script, you can view the project on the Scratch homepage.
 // @author         7Snails, TastyLittleMuffin
-// @version        1.0
+// @version        1.2
 // @match          *://scratch.mit.edu
+// @icon           
 // ==/UserScript==
 
 window.onload = function() {
