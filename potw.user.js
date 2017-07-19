@@ -15,7 +15,9 @@ div.setAttribute("id", "potwBox");
 div.setAttribute("class", "box");
 var element = document.getElementById("splashHeader");
 element.appendChild(div);
-
+document.getElementsByClassName("box")[0].style.width = "400px";
+document.getElementsByClassName("box")[1].style.width = "400px";
+document.getElementsByClassName("box")[2].style.width = "400px";
 
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open("GET", "https://raw.githubusercontent.com/7Snails/project-of-the-week/master/data.json", false);
