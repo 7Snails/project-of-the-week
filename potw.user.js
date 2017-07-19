@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Site - Script
 // @description    ES6 script
-// @author         7Snails
+// @author         7Snails, TastyLittleMuffin
 // @namespace      http://spiralx.org/
 // @version        0.0.1
 // @icon           http://tampermonkey.net/favicon.ico
