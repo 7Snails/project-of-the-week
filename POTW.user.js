@@ -39,7 +39,7 @@ xmlHttp.send(null);
 var data = JSON.parse(xmlHttp.responseText);
 
 var description = data.description;
-var projectID = data.id
+var projectID = data.id;
 
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open("GET", "https://scratch.mit.edu/api/v1/project/" + projectID, false);
