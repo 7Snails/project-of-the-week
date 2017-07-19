@@ -6,9 +6,7 @@
 // @match          *://scratch.mit.edu
 // @icon           https://raw.githubusercontent.com/7Snails/project-of-the-week/master/logo.png
 // ==/UserScript==
-
 window.onload = function() {
-
 document.querySelector('div.splash-header').id = "splashHeader";
 var newElement = document.createElement("div");
 newElement.setAttribute("id", "potwBox");
@@ -33,12 +31,10 @@ newElement.setAttribute("id", "potwContent");
 newElement.setAttribute("class", "box-content");
 element = document.getElementById("potwBox");
 element.appendChild(newElement);
-
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open("GET", "https://raw.githubusercontent.com/7Snails/project-of-the-week/master/data.json", false);
 xmlHttp.send(null);
 var data = JSON.parse(xmlHttp.responseText);
-
  
 var version = data.version;
 var newUser = localStorage.getItem("newUser");
@@ -77,5 +73,4 @@ var userData = JSON.parse(xmlHttp.responseText);
 var userImage = userData.profile.images["90x90"];
 
 document.getElementById("potwContent").innerHTML = "<a href='/projects/" + projectID + "'><img src='" + thumbnail + "' width='300px'><b>" + title + "</b></a><br><img src='" + userImage + "' width='20px'><a href='/users/" + creator + "'>" + creator + "</a><br>" + description;
-
 };
