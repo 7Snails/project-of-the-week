@@ -10,11 +10,11 @@
 // @run-at         document-end
 // ==/UserScript==
 document.querySelector('div.splash-header').id = "splashHeader";
-var para = document.createElement("p");
-var node = document.createTextNode("This is new.");
-para.appendChild(node);
+var div = document.createElement("div");
+div.setAttribute("id", "potwBox");
+div.setAttribute("class", "box");
 var element = document.getElementById("splashHeader");
-element.appendChild(para);
+element.appendChild(div);
 
 
 var xmlHttp = new XMLHttpRequest();
