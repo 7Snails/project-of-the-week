@@ -4,10 +4,9 @@
 // @author         7Snails, TastyLittleMuffin
 // @version        1.0
 // @match          *://scratch.mit.edu
-// @run-at document-end
 // ==/UserScript==
 
-
+window.onload = function() {
 
 document.querySelector('div.splash-header').id = "splashHeader";
 var newElement = document.createElement("div");
@@ -60,3 +59,4 @@ var userImage = userData.profile.images["90x90"];
 
 document.getElementById("potwContent").innerHTML = "<a href='/projects/" + projectID + "'><img src='" + thumbnail + "' width='300px'><b>" + title + "</b></a><br><img src='" + userImage + "' width='20px'><a href='/users/" + creator + "'>" + creator + "<br>" + description;
 
+};
