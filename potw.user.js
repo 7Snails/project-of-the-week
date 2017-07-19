@@ -49,6 +49,7 @@ xmlHttp.open("GET", "https://scratch.mit.edu/api/v1/project/" + data.id, false);
 xmlHttp.send(null);
 var projectData = JSON.parse(xmlHttp.responseText);
 
+var title = projectData.title;
 var creator = projectData.creator.username;
 var thumbnail = "https://" + projectData.thumbnail.substring(2, projectData.thumbnail.length);
 
@@ -60,5 +61,5 @@ var userData = JSON.parse(xmlHttp.responseText);
 var userImage = userData.profile.images["90x90"]
 
 
-document.getElementById("potwContent").innerHTML = "<center><img src='" + thumbnail + "' width='300px'><br><img src='" + userImage + "' width='20px'>" + creator + "<br>" + description + "</center>";
+document.getElementById("potwContent").innerHTML = "<center><img src='" + thumbnail + "' width='300px'>" + title + "<br><img src='" + userImage + "' width='20px'>" + creator + "<br>" + description + "</center>";
 };
