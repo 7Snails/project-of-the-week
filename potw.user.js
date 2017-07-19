@@ -33,7 +33,7 @@ element.appendChild(newElement);
 document.getElementById("boxHeaderText").innerHTML = "Project of the Week";
 newElement = document.createElement("div");
 newElement.setAttribute("id", "potwContent");
-  newElement.setAttribute("class", "box-content");
+newElement.setAttribute("class", "box-content");
 element = document.getElementById("potwBox");
 element.appendChild(newElement);
 
@@ -60,6 +60,5 @@ var userData = JSON.parse(xmlHttp.responseText);
 var userImage = userData.profile.images["90x90"]
 
 
-#<h4>Project of the Week</h4>";
-#<center><img src='" + thumbnail + "' width='300px'><br><img src='" + userImage + "' width='20px'>" + creator + "<br>" + description + "</center>";
+document.getElementById("potwContent").innerHTML = "<center><img src='" + thumbnail + "' width='300px'><br><img src='" + userImage + "' width='20px'>" + creator + "<br>" + description + "</center>";
 };
