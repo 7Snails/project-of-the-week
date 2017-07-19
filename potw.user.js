@@ -1,12 +1,9 @@
 // ==UserScript==
-// @name           Site - Script
-// @description    ES6 script
+// @name           Project of the Week
+// @description    Each week, a quality project is hand-selected. With this script, you can view the project on the Scratch homepage.
 // @author         7Snails, TastyLittleMuffin
-// @namespace      http://spiralx.org/
-// @version        0.0.1
-// @icon           http://tampermonkey.net/favicon.ico
+// @version        1.0
 // @match          *://scratch.mit.edu
-// @grant          none
 // @run-at         document-end
 // ==/UserScript==
 
