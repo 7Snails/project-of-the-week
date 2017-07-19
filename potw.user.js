@@ -9,6 +9,13 @@
 // @grant          none
 // @run-at         document-end
 // ==/UserScript==
+var check = setInterval(function(){
+  var news = document.getElementsByTagName("div")[14].innerHTML;
+  if (news == "Scratch News") {
+   clearInterval(check);
+  }
+}, 10);
+
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open("GET", "https://raw.githubusercontent.com/7Snails/project-of-the-week/master/data.json", false);
 xmlHttp.send(null);
