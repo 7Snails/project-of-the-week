@@ -43,14 +43,15 @@ xmlHttp.send(null);
 var data = JSON.parse(xmlHttp.responseText);
 
 var description = data.description;
+var projectID = data.id
 
 var xmlHttp = new XMLHttpRequest();
-xmlHttp.open("GET", "https://scratch.mit.edu/api/v1/project/" + data.id, false);
+xmlHttp.open("GET", "https://scratch.mit.edu/api/v1/project/" + projectID, false);
 xmlHttp.send(null);
 var projectData = JSON.parse(xmlHttp.responseText);
 
 var title = projectData.title;
-  var creator = projectData.creator.username;
+var creator = projectData.creator.username;
 var thumbnail = "https://" + projectData.thumbnail.substring(2, projectData.thumbnail.length);
 
 var xmlHttp = new XMLHttpRequest();
@@ -58,8 +59,7 @@ xmlHttp.open("GET", "https://api.scratch.mit.edu/users/" + creator, false);
 xmlHttp.send(null);
 var userData = JSON.parse(xmlHttp.responseText);
 
-var userImage = userData.profile.images["90x90"]
+var userImage = userData.profile.images["90x90"];
 
-window.alert(projectID);
-document.getElementById("potwContent").innerHTML = "<center><img src='" + thumbnail + "' width='300px'><h2>" + title + "</h2><img src='" + userImage + "' width='20px'>" + creator + "<br>" + description + "</center>";
+document.getElementById("potwContent").innerHTML = "<center><a href='/projects/" + projectID + "'><img src='" + thumbnail + "' width='300px'><b>" + title + "</b></a><br><img src='" + userImage + "' width='20px'>" + creator + "<br>" + description + "</center>";
 };
