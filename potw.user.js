@@ -50,7 +50,8 @@ xmlHttp.send(null);
 var projectData = JSON.parse(xmlHttp.responseText);
 
 var title = projectData.title;
-var creator = projectData.creator.username;
+window.alert(title);
+  var creator = projectData.creator.username;
 var thumbnail = "https://" + projectData.thumbnail.substring(2, projectData.thumbnail.length);
 
 var xmlHttp = new XMLHttpRequest();
