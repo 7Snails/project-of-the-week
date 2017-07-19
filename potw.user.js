@@ -60,6 +60,6 @@ var userData = JSON.parse(xmlHttp.responseText);
 
 var userImage = userData.profile.images["90x90"]
 
-
-document.getElementById("potwContent").innerHTML = "<center><img src='" + thumbnail + "' width='300px'>" + title + "<br><img src='" + userImage + "' width='20px'>" + creator + "<br>" + description + "</center>";
+window.alert(projectID);
+document.getElementById("potwContent").innerHTML = "<center><img src='" + thumbnail + "' width='300px'><h2>" + title + "</h2><img src='" + userImage + "' width='20px'>" + creator + "<br>" + description + "</center>";
 };
