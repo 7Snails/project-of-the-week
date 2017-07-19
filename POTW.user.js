@@ -38,9 +38,19 @@ xmlHttp.open("GET", "https://raw.githubusercontent.com/7Snails/project-of-the-we
 xmlHttp.send(null);
 var data = JSON.parse(xmlHttp.responseText);
 
+var version = data.version;
+var storedVersion = localStorage.getItem("version");
+if (version !== storedVersion) {
+ document.write("Project of the Week is out of date. Please update it by clicking below.");
+ document.write("<p id='update'>Update</p>");
+ document.getElementById("update").onclick = function() {
+  localStorage.setItem("version", version); 
+ }
+}
+  
 var description = data.description;
 var projectID = data.id;
-
+  
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open("GET", "https://scratch.mit.edu/api/v1/project/" + projectID, false);
 xmlHttp.send(null);
