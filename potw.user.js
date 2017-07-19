@@ -34,4 +34,4 @@ var userImage = userData.profile.images["90x90"]
 
 
 
-document.getElementsByTagName("div")[15].innerHTML = "<img src='" + thumbnail + "' width='500px'>By " + creator + "<img src='" + userImage + "'>";
+document.getElementsByTagName("div")[15].innerHTML = "<img src='" + thumbnail + "' width='300px'>By " + creator + "<img src='" + userImage + "'>";
