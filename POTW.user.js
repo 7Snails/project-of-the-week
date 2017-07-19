@@ -58,5 +58,5 @@ var userData = JSON.parse(xmlHttp.responseText);
 
 var userImage = userData.profile.images["90x90"];
 
-document.getElementById("potwContent").innerHTML = "<center><a href='/projects/" + projectID + "'><img src='" + thumbnail + "' width='300px'><b>" + title + "</b></a><br><img src='" + userImage + "' width='20px'><a href='/users/" + creator + "'>" + creator + "<br>" + description + "</center>";
+document.getElementById("potwContent").innerHTML = "<a href='/projects/" + projectID + "'><img src='" + thumbnail + "' width='300px'><b>" + title + "</b></a><br><img src='" + userImage + "' width='20px'><a href='/users/" + creator + "'>" + creator + "<br>" + description;
 };
