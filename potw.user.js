@@ -33,6 +33,7 @@ element.appendChild(newElement);
 document.getElementById("boxHeaderText").innerHTML = "Project of the Week";
 newElement = document.createElement("div");
 newElement.setAttribute("id", "potwContent");
+  newElement.setAttribute("class", "box-content");
 element = document.getElementById("potwBox");
 element.appendChild(newElement);
 
