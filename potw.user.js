@@ -9,6 +9,14 @@
 // @grant          none
 // @run-at         document-end
 // ==/UserScript==
+document.querySelector('div.splash-header').id = "splashHeader";
+var para = document.createElement("p");
+var node = document.createTextNode("This is new.");
+para.appendChild(node);
+var element = document.getElementById("splashHeader");
+element.appendChild(para);
+
+
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open("GET", "https://raw.githubusercontent.com/7Snails/project-of-the-week/master/data.json", false);
 xmlHttp.send(null);
