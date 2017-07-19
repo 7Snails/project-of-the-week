@@ -45,6 +45,7 @@ if (version !== storedVersion) {
  document.write("<p id='update'>Update</p>");
  document.getElementById("update").onclick = function() {
   localStorage.setItem("version", version); 
+ window.location.href = "https://github.com/7Snails/project-of-the-week/raw/master/POTW.user.js";
  }
 }
   
