@@ -13,25 +13,29 @@
 window.onload = function() {
 
 document.querySelector('div.splash-header').id = "splashHeader";
-var div = document.createElement("div");
-div.setAttribute("id", "potwBox");
-div.setAttribute("class", "box");
+var newElement = document.createElement("div");
+newElement.setAttribute("id", "potwBox");
+newElement.setAttribute("class", "box");
 var element = document.getElementById("splashHeader");
-element.appendChild(div);
+element.appendChild(newElement);
 document.getElementsByClassName("box")[0].style.width = "400px";
 document.getElementsByClassName("box")[1].style.width = "400px";
 document.getElementsByClassName("box")[2].style.width = "400px";
-div = document.createElement("div");
-div.setAttribute("id", "boxHeader");
-div.setAttribute("class", "box-header");
+newElement = document.createElement("div");
+newElement.setAttribute("id", "boxHeader");
+newElement.setAttribute("class", "box-header");
 element = document.getElementById("potwBox");
-element.appendChild(div);
-div = document.createElement("h4");
-div.setAttribute("id", "boxHeaderText");
+element.appendChild(newElement);
+newElement = document.createElement("h4");
+newElement.setAttribute("id", "boxHeaderText");
 element = document.getElementById("boxHeader");
-element.appendChild(div);
+element.appendChild(newElement);
 document.getElementById("boxHeaderText").innerHTML = "Project of the Week";
-  
+newElement = document.createElement("div");
+newElement.setAttribute("id", "potwContent");
+element = document.getElementById("potwBox");
+element.appendChild(newElement);
+
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open("GET", "https://raw.githubusercontent.com/7Snails/project-of-the-week/master/data.json", false);
 xmlHttp.send(null);
