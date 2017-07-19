@@ -4,7 +4,7 @@
 // @author         7Snails, TastyLittleMuffin
 // @version        1.2
 // @match          *://scratch.mit.edu
-// @icon           https://raw.githubusercontent.com/7Snails/project-of-the-week/master/potwlogo.svg
+// @icon           https://raw.githubusercontent.com/7Snails/project-of-the-week/master/logo.png
 // ==/UserScript==
 window.onload = function() {
 document.querySelector('div.splash-header').id = "splashHeader";
