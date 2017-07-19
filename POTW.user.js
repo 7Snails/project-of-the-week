@@ -6,6 +6,7 @@
 // @match          *://scratch.mit.edu
 // @icon           https://raw.githubusercontent.com/7Snails/project-of-the-week/master/logo.png
 // ==/UserScript==
+
 window.onload = function() {
 document.querySelector('div.splash-header').id = "splashHeader";
 var newElement = document.createElement("div");
