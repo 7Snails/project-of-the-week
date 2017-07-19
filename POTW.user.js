@@ -38,6 +38,23 @@ xmlHttp.open("GET", "https://raw.githubusercontent.com/7Snails/project-of-the-we
 xmlHttp.send(null);
 var data = JSON.parse(xmlHttp.responseText);
 
+ 
+var version = data.version;
+var newUser = localStorage.getItem("newUser");
+if (newUser === null) {
+  window.alert("Thank you for installing Project of the Week! Our goal is to support wonderful projects.");
+  localStorage.setItem("newUser", 0); 
+localStorage.setItem("version", version);
+}
+  var storedVersion = localStorage.getItem("version");
+if (version !== storedVersion) {
+ document.write("Project of the Week is out of date. Please update it by clicking below.");
+ document.write("<p id='update'>Update</p>");
+ document.getElementById("update").onclick = function() {
+  localStorage.setItem("version", version); 
+ window.location.href = "https://github.com/7Snails/project-of-the-week/raw/master/POTW.user.js";
+ }
+}
   
 var description = data.description;
 var projectID = data.id;
