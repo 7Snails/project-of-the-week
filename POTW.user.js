@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name           Project of the Week
-// @description    Each week, a quality project is selected. With this script, you can view the project on the Scratch homepage.
+// @description    Each week, a quality project is hand-selected. With this script, you can view the project on the Scratch homepage.
 // @author         7Snails, TastyLittleMuffin
-// @version        1.1
+// @version        1.0
 // @match          *://scratch.mit.edu
 // @run-at         document-end
 // ==/UserScript==
@@ -58,5 +58,5 @@ var userData = JSON.parse(xmlHttp.responseText);
 
 var userImage = userData.profile.images["90x90"];
 
-document.getElementById("potwContent").innerHTML = "<center><a href='/projects/" + projectID + "'><img src='" + thumbnail + "' width='300px'><b>" + title + "</b></a><br><img src='" + userImage + "' width='20px'>" + creator + "<br>" + description + "</center>";
+document.getElementById("potwContent").innerHTML = "<center><a href='/projects/" + projectID + "'><img src='" + thumbnail + "' width='300px'><b>" + title + "</b></a><br><img src='" + userImage + "' width='20px'><a href='/users/" + creator + "'>" + creator + "<br>" + description + "</center>";
 };
