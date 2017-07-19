@@ -9,9 +9,6 @@
 // @grant          none
 // @run-at         document-end
 // ==/UserScript==
-$(window).bind("load", function() {
-   
-
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open("GET", "https://raw.githubusercontent.com/7Snails/project-of-the-week/master/data.json", false);
 xmlHttp.send(null);
@@ -37,4 +34,3 @@ var userImage = userData.profile.images["90x90"]
 
 document.getElementsByTagName("div")[14].innerHTML = "<h4>Project of the Week</h4>";
 document.getElementsByTagName("div")[15].innerHTML = "<center><img src='" + thumbnail + "' width='300px'><br><img src='" + userImage + "' width='20px'>" + creator + "<br>" + description + "</center>";
-});
