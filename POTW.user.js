@@ -70,8 +70,12 @@ var xmlHttp = new XMLHttpRequest();
 xmlHttp.open("GET", "https://api.scratch.mit.edu/users/" + creator, false);
 xmlHttp.send(null);
 var userData = JSON.parse(xmlHttp.responseText);
-
 var userImage = userData.profile.images["90x90"];
+
+newElement = document.createElement("div");
+element = document.getElementById("splashHeader");
+element.appendChild(newElement);
+ 
 document.getElementById("potwContent").innerHTML = "<div id='about' class='w3-modal'> <div class='w3-modal-content'> <div class='w3-container'> <span onclick='document.getElementById('about').style.display='none'' class='w3-button w3-display-topright'>&times;</span> <p>Some text in the Modal..</p> <p>Some text in the Modal..</p> </div> </div> </div>";
 document.getElementById("potwContent").innerHTML = "<a href='/projects/" + projectID + "'><img src='" + thumbnail + "' width='300px'><b>" + title + "</b></a><br><a href='/users/" + creator + "'>" + creator + "</a><br>" + description + "<br><small><p>About</p></small>";
 };
