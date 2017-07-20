@@ -42,16 +42,18 @@ var newUser = localStorage.getItem("newUser");
 if (newUser === null) {
   window.alert("Thank you for installing Project of the Week! Our goal is to support wonderful projects.");
   localStorage.setItem("newUser", 0); 
-localStorage.setItem("version", version);
+  localStorage.setItem("version", version);
 }
-  var storedVersion = localStorage.getItem("version");
-if (version !== storedVersion) {
- document.write("Project of the Week is out of date. Please update it by clicking below.");
- document.write("<button id='update'>Update</button><br>");
- document.getElementById("update").onclick = function() {
+ 
+var storedVersion = localStorage.getItem("version");
+if (version !== storedVersion) 
+{
+  document.write("Project of the Week is out of date. Please update it by clicking below.");
+  document.write("<button id='update'>Update</button><br>");
+  document.getElementById("update").onclick = function() {
   localStorage.setItem("version", version); 
- window.location.href = "https://github.com/7Snails/project-of-the-week/raw/master/POTW.user.js";
- };
+  window.location.href = "https://github.com/7Snails/project-of-the-week/raw/master/POTW.user.js";
+  };
 }
   
 var description = data.description;
@@ -72,9 +74,5 @@ xmlHttp.send(null);
 var userData = JSON.parse(xmlHttp.responseText);
 var userImage = userData.profile.images["90x90"];
 
-
-
-    document.getElementById("potwContent").innerHTML = "<a href='/projects/" + projectID + "'><img src='" + thumbnail + "' width='300px'><b>" + title + "</b></a><br><a href='/users/" + creator + "'>" + creator + "</a><br>" + description + "<br><small><details><summary>About</summary>Project of the Week delivers you weekly, hand-picked, high quality projects. Learn more <a href='/users/ProjectOfTheWeek'>here</a>.</details></small>";
-
-    
-};
+ document.getElementById("potwContent").innerHTML = "<a href='/projects/" + projectID + "'><img src='" + thumbnail + "' width='300px'><b>" + title + "</b></a><br><a href='/users/" + creator + "'>" + creator + "</a><br>" + description + "<br><small><details><summary>About</summary>Project of the Week delivers you weekly, hand-picked, high quality projects. Learn more <a href='/users/ProjectOfTheWeek'>here</a>.</details></small>";
+ };
