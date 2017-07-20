@@ -1,7 +1,7 @@
 {
   "id":157160342,
   "description": "We selected this neato project because of its amazing 3D cube with gifs.",
-  "version": "1.2",
+  "version": "1.2.1",
   "info": "This file contains information about the selected project. The userscript gets data from here and then the Scratch API.",
   "note": "Changes may take up to 5 minutes to propagate."
 }
