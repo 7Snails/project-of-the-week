@@ -50,12 +50,11 @@ window.onload = function() {
     // Check for updates and respond appropriately
     var storedVersion = localStorage.getItem("version");
     if (version !== storedVersion) {
-        document.write("Project of the Week is out of date. Please update it by clicking below.");
+        document.write("Project of the Week is out of date. Please update it by clicking below.  <i>Refresh</i> after you update.");
         document.write("<button id='update'>Update</button><br>");
         document.getElementById("update").onclick = function() {
             localStorage.setItem("version", version);
             window.location.href = "https://github.com/7Snails/project-of-the-week/raw/master/POTW.user.js";
-            location.reload();
         };
     }
     // Fetch project information from the Scratch API and define the variables
