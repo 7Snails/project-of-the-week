@@ -1,4 +1,4 @@
-# Project of the Week
+# <a href='https://scratch.mit.edu/users/ProjectOfTheWeek/'>Project of the Week</a>
 This is a Scratch user script that adds a display on the home page showing a "project of the week" that we hand-pick. 
 <br><br><b>Installation</b><br>
 The Project of the Week installation process is simple.
