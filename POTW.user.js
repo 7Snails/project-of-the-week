@@ -72,6 +72,17 @@ xmlHttp.send(null);
 var userData = JSON.parse(xmlHttp.responseText);
 
 var userImage = userData.profile.images["90x90"];
-
-document.getElementById("potwContent").innerHTML = "<a href='/projects/" + projectID + "'><img src='" + thumbnail + "' width='300px'><b>" + title + "</b></a><br><a href='/users/" + creator + "'>" + creator + "</a><br>" + description + "<br><small><a href='/potwabout'>About</a></small>";
+document.write("
+               <div id="id01" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id01').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+      <p>Some text in the Modal..</p>
+      <p>Some text in the Modal..</p>
+    </div>
+  </div>
+</div>
+               ");
+document.getElementById("potwContent").innerHTML = "<a href='/projects/" + projectID + "'><img src='" + thumbnail + "' width='300px'><b>" + title + "</b></a><br><a href='/users/" + creator + "'>" + creator + "</a><br>" + description + "<br><small><p onclick="document.getElementById('about').style.display='block'">About</p></small>";
 };
