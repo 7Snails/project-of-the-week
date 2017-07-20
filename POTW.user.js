@@ -8,6 +8,8 @@
 // ==/UserScript==
 
 window.onload = function() {
+
+// Set up the DOM
 document.querySelector('div.splash-header').id = "splashHeader";
 var newElement = document.createElement("div");
 newElement.setAttribute("id", "potwBox");
@@ -32,19 +34,25 @@ newElement.setAttribute("id", "potwContent");
 newElement.setAttribute("class", "box-content");
 element = document.getElementById("potwBox");
 element.appendChild(newElement);
+
+// Download the data and define variables
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open("GET", "https://raw.githubusercontent.com/7Snails/project-of-the-week/master/data.json", false);
 xmlHttp.send(null);
 var data = JSON.parse(xmlHttp.responseText);
- 
+var description = data.description;
+var projectID = data.id;
 var version = data.version;
+ 
+// Check if the user is new, and if so, create an alert and, if a new user, set the version in local storage.
 var newUser = localStorage.getItem("newUser");
 if (newUser === null) {
   window.alert("Thank you for installing Project of the Week! Our goal is to support wonderful projects.");
   localStorage.setItem("newUser", 0); 
   localStorage.setItem("version", version);
 }
- 
+
+// Check for updates and respond appropriately
 var storedVersion = localStorage.getItem("version");
 if (version !== storedVersion) 
 {
@@ -56,23 +64,22 @@ if (version !== storedVersion)
   };
 }
   
-var description = data.description;
-var projectID = data.id;
-  
+// Fetch project information from the Scratch API and define the variables
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open("GET", "https://scratch.mit.edu/api/v1/project/" + projectID, false);
 xmlHttp.send(null);
 var projectData = JSON.parse(xmlHttp.responseText);
-
 var title = projectData.title;
 var creator = projectData.creator.username;
-var thumbnail = "https://" + projectData.thumbnail.substring(2, projectData.thumbnail.length);
+//var thumbnail = "https://" + projectData.thumbnail.substring(2, projectData.thumbnail.length);
 
+/*
+This is pending approval
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open("GET", "https://api.scratch.mit.edu/users/" + creator, false);
 xmlHttp.send(null);
 var userData = JSON.parse(xmlHttp.responseText);
 var userImage = userData.profile.images["90x90"];
-
+*/
  document.getElementById("potwContent").innerHTML = "<a href='/projects/" + projectID + "'><img src='" + thumbnail + "' width='300px'><b>" + title + "</b></a><br><a href='/users/" + creator + "'>" + creator + "</a><br>" + description + "<br><small><details><summary>About</summary>Project of the Week delivers you weekly, hand-picked, high quality projects. Learn more <a href='/users/ProjectOfTheWeek'>here</a>.</details></small>";
  };
