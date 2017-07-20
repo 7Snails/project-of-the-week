@@ -74,7 +74,7 @@ var userImage = userData.profile.images["90x90"];
 
 
 
-    document.getElementById("potwContent").innerHTML = "<a href='/projects/" + projectID + "'><img src='" + thumbnail + "' width='300px'><b>" + title + "</b></a><br><a href='/users/" + creator + "'>" + creator + "</a><br>" + description + "<br><small><details<summary>About</summary>Project of the Week delivers you weekly, hand-picked, high quality projects.</details></small>";
+    document.getElementById("potwContent").innerHTML = "<a href='/projects/" + projectID + "'><img src='" + thumbnail + "' width='300px'><b>" + title + "</b></a><br><a href='/users/" + creator + "'>" + creator + "</a><br>" + description + "<br><small><details><summary>About</summary>Project of the Week delivers you weekly, hand-picked, high quality projects.</details></small>";
 
     
 };
