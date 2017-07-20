@@ -40,7 +40,7 @@ window.onload = function() {
     var description = data.description;
     var projectID = data.id;
     var version = data.version;
-    // Check if the user is new, and if so, create an alert and, if a new user, set the version in local storage.
+    // Check if the user is new, and if so, create an alert and, if a new user, set the version in local storage
     var newUser = localStorage.getItem("newUser");
     if (newUser === null) {
         window.alert("Thank you for installing Project of the Week! Our goal is to support wonderful projects.");
