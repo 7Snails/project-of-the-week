@@ -55,6 +55,7 @@ window.onload = function() {
         document.getElementById("update").onclick = function() {
             localStorage.setItem("version", version);
             window.location.href = "https://github.com/7Snails/project-of-the-week/raw/master/POTW.user.js";
+            location.reload();
         };
     }
     // Fetch project information from the Scratch API and define the variables
