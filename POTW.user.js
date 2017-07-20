@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Project of the Week
 // @description    Each week, a quality project is hand-selected. With this script, you can view the project on the Scratch homepage.
-// @author         7Snails, TastyLittleMuffin
+// @author         7Snails, TastyLittleMuffin, BenHyatt
 // @version        1.2.1
 // @match          *://scratch.mit.edu
 // @icon           https://raw.githubusercontent.com/7Snails/project-of-the-week/master/logo.png
@@ -73,9 +73,10 @@ var userData = JSON.parse(xmlHttp.responseText);
 var userImage = userData.profile.images["90x90"];
 
 newElement = document.createElement("div");
+newElement.setAttribute("id", "modalHolder");
 element = document.getElementById("splashHeader");
 element.appendChild(newElement);
  
-document.getElementById("potwContent").innerHTML = "<div id='about' class='w3-modal'> <div class='w3-modal-content'> <div class='w3-container'> <span onclick='document.getElementById('about').style.display='none'' class='w3-button w3-display-topright'>&times;</span> <p>Some text in the Modal..</p> <p>Some text in the Modal..</p> </div> </div> </div>";
+document.getElementById("modalHolder").innerHTML = "<div id='about' class='w3-modal'> <div class='w3-modal-content'> <div class='w3-container'> <span onclick='document.getElementById('about').style.display='none'' class='w3-button w3-display-topright'>&times;</span> <p>Some text in the Modal..</p> <p>Some text in the Modal..</p> </div> </div> </div>";
 document.getElementById("potwContent").innerHTML = "<a href='/projects/" + projectID + "'><img src='" + thumbnail + "' width='300px'><b>" + title + "</b></a><br><a href='/users/" + creator + "'>" + creator + "</a><br>" + description + "<br><small><p>About</p></small>";
 };
