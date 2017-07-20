@@ -47,7 +47,7 @@ localStorage.setItem("version", version);
   var storedVersion = localStorage.getItem("version");
 if (version !== storedVersion) {
  document.write("Project of the Week is out of date. Please update it by clicking below.");
- document.write("<p id='update'>Update</p>");
+ document.write("<button id='update'>Update</button>");
  document.getElementById("update").onclick = function() {
   localStorage.setItem("version", version); 
  window.location.href = "https://github.com/7Snails/project-of-the-week/raw/master/POTW.user.js";
