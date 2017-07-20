@@ -64,7 +64,8 @@ window.onload = function() {
     var projectData = JSON.parse(xmlHttp.responseText);
     var title = projectData.title;
     var creator = projectData.creator.username;
-    /*var thumbnail = "https://" + projectData.thumbnail.substring(2, projectData.thumbnail.length);
+    var thumbnail = "https://" + projectData.thumbnail.substring(2, projectData.thumbnail.length);
+    /*
     This is pending approval
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", "https://api.scratch.mit.edu/users/" + creator, false);
